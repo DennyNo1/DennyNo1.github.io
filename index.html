@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 引入 CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <h1>欢迎来到Denny的密码生成器</h1>
+    <p>我们都知道密码记忆十分麻烦。通常大多数密码都用同一个，但是一旦泄露一个则十分麻烦。</p>
+    <p>所以Denny的代码生成器为了解决这个麻烦而生。以网址（domain）和代码（code）经安全加密所生成新的复杂密码</p>
+    <p>只要网址和代码保持相同，则生成的密码不变，因此省去您记忆的麻烦。</p>
+    <form id="myForm">
+        <label for="domain">请输入网址（强烈建议以www.bilibili.com这种形式方便记忆）：</label><br>
+        <input type="text" id="domain" name="domain" required><br><br>
+        <label for="code">请输入代码（简单但是方便记忆，可以所有网址都使用同一个）：</label><br>
+        <input type="password" id="code" name="code" required><br><br>
+        <button type="submit" id="submitBtn">生成密码</button>
+        <h2>生成的密码是：</h2>
+        <p id="result"></p>
+    </form>
+    <!-- 引入 JS -->
+    <script src="assets/js/main.js" defer></script>
+    <!-- 这个 <script> 会在浏览器全局创建一个 argon2 对象。 -->
+    <script src="https://cdn.jsdelivr.net/npm/argon2-browser/dist/argon2.min.js"></script>
+
+</body>
+
+</html>
