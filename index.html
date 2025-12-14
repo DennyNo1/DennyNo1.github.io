@@ -13,8 +13,8 @@
 
 <body>
     <h1>欢迎来到Denny的密码生成器</h1>
-    <p>我们都知道密码记忆十分麻烦。通常大多数密码都用同一个，但是一旦泄露一个则十分麻烦。</p>
-    <p>所以Denny的代码生成器为了解决这个麻烦而生。以网址（domain）和代码（code）经安全加密所生成新的复杂密码</p>
+    <p>我们都知道密码记忆十分麻烦。通常大多数密码都用同一个，一旦泄露一个则十分麻烦。</p>
+    <p>所以Denny的代码生成器为了解决这个麻烦而生。以网址（domain）和代码（code）经安全加密所生成新的复杂密码。</p>
     <p>只要网址和代码保持相同，则生成的密码不变，因此省去您记忆的麻烦。</p>
     <form id="myForm">
         <label for="domain">请输入网址（强烈建议以www.bilibili.com这种形式方便记忆）：</label><br>
@@ -25,10 +25,13 @@
         <h2>生成的密码是：</h2>
         <p id="result"></p>
     </form>
-    <!-- 引入 JS -->
-    <script src="assets/js/main.js" defer></script>
-    <!-- 这个 <script> 会在浏览器全局创建一个 argon2 对象。 -->
-    <script src="https://cdn.jsdelivr.net/npm/argon2-browser/dist/argon2.min.js"></script>
+
+    <!-- 谁被用，谁先加载 -->
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/argon2-browser/dist/argon2.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/js-sha256@0.10.0/build/sha256.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+
+
 
 </body>
 
